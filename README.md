@@ -67,6 +67,9 @@ pipenv uninstall <package>
 pipenv lock
 ```
 
+# Installing [ chromedriver ]
+Google it and place the executable that matches [ YOUR ] chrome web browser's version in the [ chromedriver ] folder
+
 # Running [ main.py ] with [ pipenv ]
 ## Open a new terminal and run:
 ```
