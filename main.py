@@ -31,7 +31,6 @@ try:
 
     current_dir = str(Path(__file__).parent)
     download_dir =  current_dir + "\\downloads"
-    chromedriver_version = 96
 
     chrome_options = Options()
     # chrome_options.add_argument("--headless")
@@ -49,7 +48,7 @@ try:
             "safebrowsing.enabled": False
     })
 
-    driver = webdriver.Chrome(chrome_options = chrome_options, executable_path = f"{current_dir}\\chromedriver_{chromedriver_version}\\chromedriver.exe")    
+    driver = webdriver.Chrome(chrome_options = chrome_options, executable_path = f"{current_dir}\\chromedriver\\chromedriver.exe")    
     enable_download_headless(driver, download_dir)
     
     print("---- ---- ---- ----")
