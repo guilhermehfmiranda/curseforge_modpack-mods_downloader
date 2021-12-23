@@ -1,12 +1,12 @@
 # Diclaimer
 Tested on Windows 10 w/ Python 3.9
 
-# WWW
+# What? Why? How?
 ## What is it?
 A Python program to automatically download a list of mods for Minecraft - Java Edition from curseforge.com based on the contents of a modpack's manifest.json and modlist.html.
 ## Why is it?
 I didn't want to download a custom Minecraft launcher just to download a batch of mods listed in a modpack, neither wanted to manually click the mod's link, select the version chosen by the modpack's creator, press download and save.
-## Which is the logic behind it?
+## How it works?
 In short, webscrapping used to download mods.
 ### Step 1 > json
 ```
@@ -35,18 +35,16 @@ After the last loop, waits for user input in the console to kill the webdriver's
 only requiring the user to check if all was downloaded already
 ```
 
-# Installing [ pipenv ]
-## Open a new terminal and run:
+# Steps to Run it (first time)
+## Install [ pipenv ]
 ```
 pip install --user pipenv
 ```
-
-# Using [ Pipfile ] and [ Pipfile.lock ] on [ pipenv ]
-## Installing all dependencies (including dev)
+## Install all dependencies (including dev)
 ```
 pipenv install --dev
 ```
-### Installing a package
+<!-- ### Installing a package
 ```
 pipenv install <package>
 ```
@@ -65,13 +63,12 @@ pipenv uninstall <package>
 ## Locking packages
 ```
 pipenv lock
-```
-
-# Installing [ chromedriver ]
+``` -->
+## Install [ chromedriver ]
 Google it and place the executable that matches [ YOUR ] chrome web browser's version in the [ chromedriver ] folder
-
-# Running [ main.py ] with [ pipenv ]
-## Open a new terminal and run:
+## [ manifest.json ] and [ modlist.html ]
+Place them in the same folder as [ main.py ]
+## Run [ main.py ] with [ pipenv ]
 ```
 pipenv run py main.py
 ```
