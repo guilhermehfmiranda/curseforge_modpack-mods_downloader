@@ -1,10 +1,20 @@
-from bs4 import BeautifulSoup
+# standard packages
 import json
+from pathlib import Path
+import time
+
+# external packages
+from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from pathlib import Path
-import os
-import time
+
+# code
+with open('manifest.json', 'r') as f:
+    manifest_json = json.loads(f.read())
+
+file_ids = []
+for id in manifest_json['files']:
+    file_ids.append(id['fileID'])
 
 with open('modlist.html', 'r') as f:
     modlist_html = BeautifulSoup(f.read(), 'html.parser')
@@ -12,13 +22,6 @@ with open('modlist.html', 'r') as f:
 project_links = []
 for link in modlist_html.find_all('a'):
     project_links.append(link.get('href'))
-
-with open('manifest.json', 'r') as f:
-    manifest_json = json.loads(f.read())
-
-file_ids = []
-for id in manifest_json['files']:
-    file_ids.append(id['fileID'])
 
 try:
     def enable_download_headless(browser,download_dir):
