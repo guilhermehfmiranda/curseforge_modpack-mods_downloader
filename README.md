@@ -35,7 +35,7 @@ After the last loop, waits for user input in the console to kill the webdriver's
 only requiring the user to check if all was downloaded already
 ```
 
-# Steps to Run it (first time)
+# Steps to Run it
 ## Install [ pipenv ]
 ```
 pip install --user pipenv
