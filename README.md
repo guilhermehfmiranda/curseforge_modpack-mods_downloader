@@ -6,7 +6,7 @@ Tested on Windows 10 w/ Python 3.9
 A Python program to automatically download a list of mods for Minecraft - Java Edition from curseforge.com based on the contents of a modpack's manifest.json and modlist.html.
 ## Why is it?
 I didn't want to download a custom Minecraft launcher just to download a batch of mods listed in a modpack, neither wanted to manually click the mod's link, select the version chosen by the modpack's creator, press download and save.
-## How it works?
+## How is it (working)?
 In short, webscrapping used to download mods.
 ### Step 1 > json
 ```
